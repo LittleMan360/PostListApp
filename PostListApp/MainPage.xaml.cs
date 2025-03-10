@@ -42,9 +42,9 @@ namespace PostListApp
                     ShowErrorMessage("Failed to retrieve posts.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                ShowErrorMessage($"An error occurred while loading posts: {ex.Message}");
+                ShowErrorMessage("An error occurred while loading posts.");
             }
             finally
             {
@@ -63,9 +63,9 @@ namespace PostListApp
 
     public class Post
     {
-        public int userId { get; set; }
-        public int id { get; set; }
-        public string title { get; set; } = string.Empty;
-        public string body { get; set; } = string.Empty;
+        public int UserId { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Body { get; set; } = string.Empty;
     }
 }
